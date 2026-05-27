@@ -104,6 +104,7 @@ Open:
 | License | [AGPL-3.0-or-later](./LICENSE) |
 | Deploy | Static prerender -> **https://defender.kineticgain.com/** |
 | Data posture | Synthetic sample data only; no live Microsoft tenant credentials, mailbox content, or production Defender exports |
+| Suite | Part of the [Kinetic Gain Protocol Suite](https://suite.kineticgain.com/) operator portfolio · apex: [kineticgain.com](https://kineticgain.com) |
 
 ## Docs
 
