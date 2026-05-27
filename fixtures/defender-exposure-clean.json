@@ -1,0 +1,30 @@
+{
+  "controls": [
+    {
+      "id": "ctrl-clean-core",
+      "tenantId": "tenant-clean",
+      "scope": "Global tenant",
+      "status": "HEALTHY",
+      "plans": ["ATTACK_PATH", "DEVICE", "IDENTITY", "EMAIL", "VULNERABILITY"],
+      "owner": "Exposure Operations",
+      "automatedRemediation": true
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "md-clean-01",
+      "category": "Identity",
+      "title": "Expected guest review replay",
+      "scope": "Global tenant",
+      "severity": "low",
+      "status": "RESOLVED",
+      "assetType": "Identity",
+      "asset": "guest-audit-bot",
+      "principal": "guest-audit-bot#EXT#@kineticgain.onmicrosoft.com",
+      "source": "IDENTITY",
+      "createdAt": "2026-05-29T12:00:00Z",
+      "updatedAt": "2026-05-29T13:00:00Z",
+      "owner": "Identity Operations"
+    }
+  ]
+}

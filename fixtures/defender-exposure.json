@@ -1,0 +1,109 @@
+{
+  "controls": [
+    {
+      "id": "ctrl-tenant-core",
+      "tenantId": "tenant-kg-prod",
+      "scope": "Global tenant",
+      "status": "HEALTHY",
+      "plans": ["ATTACK_PATH", "DEVICE", "IDENTITY", "VULNERABILITY"],
+      "owner": "Exposure Operations",
+      "automatedRemediation": true
+    },
+    {
+      "id": "ctrl-collab-eu",
+      "tenantId": "tenant-kg-emea",
+      "scope": "EMEA collaboration tenant",
+      "status": "DEGRADED",
+      "plans": ["IDENTITY", "EMAIL"],
+      "owner": "Collaboration Security",
+      "automatedRemediation": false
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "md-001",
+      "category": "Attack paths",
+      "title": "Attack path from unmanaged admin workstation to privileged cloud app remains open",
+      "scope": "Global tenant",
+      "severity": "high",
+      "status": "ACTIVE",
+      "assetType": "Device",
+      "asset": "WIN-ADMIN-22",
+      "source": "ATTACK_PATH",
+      "createdAt": "2026-05-26T09:10:00Z",
+      "updatedAt": "2026-05-26T10:35:00Z",
+      "owner": "Exposure Operations"
+    },
+    {
+      "id": "md-002",
+      "category": "Identity",
+      "title": "Privileged break-glass account lacks current risk review",
+      "scope": "Global tenant",
+      "severity": "high",
+      "status": "ACTIVE",
+      "assetType": "Identity",
+      "asset": "svc-breakglass-01",
+      "principal": "svc-breakglass-01@kineticgain.com",
+      "source": "IDENTITY",
+      "createdAt": "2026-05-25T20:15:00Z",
+      "updatedAt": "2026-05-25T21:00:00Z",
+      "owner": "Identity Operations"
+    },
+    {
+      "id": "md-003",
+      "category": "Device",
+      "title": "Server exposure after EDR drift on finance reporting node",
+      "scope": "Finance workloads",
+      "severity": "medium",
+      "status": "ACTIVE",
+      "assetType": "Server",
+      "asset": "srv-fin-reports-03",
+      "source": "DEVICE",
+      "createdAt": "2026-05-24T22:00:00Z",
+      "updatedAt": "2026-05-24T22:40:00Z",
+      "owner": "Endpoint Engineering"
+    },
+    {
+      "id": "md-004",
+      "category": "Collaboration",
+      "title": "Mailbox forwarding and phishing-safe-link policy proof is incomplete",
+      "scope": "EMEA collaboration tenant",
+      "severity": "medium",
+      "status": "ACTIVE",
+      "assetType": "Mailbox",
+      "asset": "finance-emea@kineticgain.com",
+      "source": "EMAIL",
+      "createdAt": "2026-05-24T08:30:00Z",
+      "updatedAt": "2026-05-24T09:15:00Z",
+      "owner": "Collaboration Security"
+    },
+    {
+      "id": "md-005",
+      "category": "Vulnerability",
+      "title": "Critical browser vulnerability remains active on executive laptop",
+      "scope": "Executive fleet",
+      "severity": "high",
+      "status": "ACTIVE",
+      "assetType": "Device",
+      "asset": "LAP-EXEC-07",
+      "source": "VULNERABILITY",
+      "createdAt": "2026-05-23T12:00:00Z",
+      "updatedAt": "2026-05-23T12:20:00Z"
+    },
+    {
+      "id": "md-006",
+      "category": "Identity",
+      "title": "Legacy guest account spike reviewed and closed",
+      "scope": "EMEA collaboration tenant",
+      "severity": "low",
+      "status": "RESOLVED",
+      "assetType": "Identity",
+      "asset": "guest-partner-legacy",
+      "principal": "guest-partner-legacy#EXT#@kineticgain.onmicrosoft.com",
+      "source": "IDENTITY",
+      "createdAt": "2026-05-20T12:00:00Z",
+      "updatedAt": "2026-05-21T08:00:00Z",
+      "owner": "Identity Operations"
+    }
+  ]
+}
